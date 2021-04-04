@@ -1,0 +1,205 @@
+[General]
+# Update-2021.04.05.
+# > Wi-Fi Assist
+wifi-assist = false
+# > Internet 测试 URL
+internet-test-url = http://captive.apple.com
+# > Proxy 测速 URL
+proxy-test-url = http://www.gstatic.com/generate_204
+# > Test Timeout (s)
+test-timeout = 5
+# > TLS Engine
+tls-provider = openssl
+# > GeoIP 数据库
+geoip-maxmind-url = https://github.com/Hackl0us/GeoIP2-CN/raw/release/Country.mmdb
+ipv6 = true
+# Wi-Fi Access
+# > 允许 Wi-Fi 访问
+allow-wifi-access = false
+wifi-access-http-port = 6152
+wifi-access-socks5-port = 6153
+# > 允许 Wi-Fi 访问 For macOS, 若允许远程访问将 127.0.0.1 改为 0.0.0.0
+http-listen = 127.0.0.1:6152
+socks5-listen = 127.0.0.1:6153
+# 远程 Dashboard
+external-controller-access = Password@127.0.0.1:6170
+# Compatibility
+# > 兼容模式
+compatibility-mode = False
+# > 跳过代理
+skip-proxy = 127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, passenger.t3go.cn, localhost, *.local
+# > 排除简单主机名
+exclude-simple-hostnames = true
+# Experimental
+network-framework = false
+# DNS Server
+dns-server = 223.5.5.5, 114.114.114.114, 8.8.8.8, 119.29.29.29, system
+# > 从 /etc/hosts 读取 DNS 记录
+read-etc-hosts = true
+# 国内正常情况下没必要使用DoH，性能损耗比较严重。部分DoH不支持ECS导致CDN分配错误而导致资源加载缓慢。如无必要不建议使用 DNS over HTTPS，如需启用直接注释即可（删除斜杠）
+//doh-server = https://223.5.5.5/dns-query
+# > DOH 请求通过代理策略执行
+doh-follow-outbound-mode = false
+# Advanced
+# > Log Level
+loglevel = notify
+# > 当遇到 REJECT 策略时返回错误页
+show-error-page-for-reject = true
+# > Always Real IP Hosts
+always-real-ip = link-ip.nextdns.io, msftconnecttest.com, msftncsi.com, *.msftconnecttest.com, *.msftncsi.com, *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com, *.battlenet.com.cn, *.battlenet.com, *.blzstatic.cn, *.battle.net
+# > Hijack DNS
+hijack-dns = 8.8.8.8:53, 8.8.4.4:53
+# > TCP Force HTTP Hosts
+force-http-engine-hosts = *.ott.cibntv.net,123.59.31.1,119.18.193.135,122.14.246.33,175.102.178.52
+# > VIF Excluded Routes
+tun-excluded-routes = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 239.255.255.250/32
+# > VIF Included Routes
+tun-included-routes = 192.168.1.12/32
+# > 当 Wi-Fi 不是首选网络时 SSID 组策略使用默认策略
+use-default-policy-if-wifi-not-primary = false
+# > HTTP-API
+# 让另一个App或者设备通过HTTP-API控制Surge功能
+# 依次为：密码，主机名，端口
+http-api =Password@127.0.0.1:6171
+
+[Replica]
+# 抓取流量 => 过滤器 1为开启，0为关闭
+# > 隐藏 Apple 请求
+hide-apple-request = 1
+# > 隐藏 Crashlytics 请求
+hide-crash-reporter-request = 1
+# > 隐藏 UDP 会话
+hide-udp = 1
+# > 关键词过滤器
+# none（关闭关键词过滤器） / whitelist（仅记录包含关键字的请求） / blacklist（仅记录不包含关键字的请求） / pattern（匹配通配符的请求）
+keyword-filter-type = blacklist
+keyword-filter = icloud, ocsp, logs, analytic, imap, adthor, applovin, appnext, talk, dropbox, github, spys, nexdns
+
+[Proxy]
+ad-gif = reject-tinygif
+ad-block = reject
+DIRECT = direct
+🎧 = ss, music.desperadoj.com, 30003, encrypt-method=aes-128-gcm, password=desperadoj.com_free_proxy_emx2
+
+[Proxy Group]
+𝑭𝒊𝒏𝒂𝒍 = select, DIRECT, 𝑨𝒖𝒕𝒐 ⛷
+𝑷𝒓𝒐𝒙𝒚 = select, 𝑨𝒖𝒕𝒐 ⛷, 𝑺𝒆𝒍𝒆𝒄𝒕 🪁, 𝑳𝒐𝒂𝒅-𝑩𝒂𝒍𝒂𝒏𝒄𝒆 🏂
+𝑨𝒖𝒕𝒐 ⛷ = url-test, 𝑺𝒆𝒍𝒆𝒄𝒕 🪁, policy-path=订阅地址, interval=600, tolerance=100, evaluate-before-use=true
+𝑺𝒆𝒍𝒆𝒄𝒕 🪁 = select, DIRECT, policy-path=订阅地址
+𝑳𝒐𝒂𝒅-𝑩𝒂𝒍𝒂𝒏𝒄𝒆 🏂 = load-balance, policy-path=订阅地址, interval=600, tolerance=100, persistent=true
+𝑺𝒑𝒆𝒆𝒅𝒕𝒆𝒔𝒕 = select, 𝑨𝒖𝒕𝒐 ⛷, 𝑺𝒆𝒍𝒆𝒄𝒕 🪁, DIRECT
+𝒀𝒐𝒖𝒕𝒖𝒃𝒆 = select, 𝑨𝒖𝒕𝒐 ⛷, 𝑺𝒆𝒍𝒆𝒄𝒕 🪁, 𝑳𝒐𝒂𝒅-𝑩𝒂𝒍𝒂𝒏𝒄𝒆 🏂
+𝑵𝒆𝒕𝒇𝒍𝒊𝒙 = select, 𝑺𝒆𝒍𝒆𝒄𝒕 🪁, 𝑳𝒐𝒂𝒅-𝑩𝒂𝒍𝒂𝒏𝒄𝒆 🏂, 𝑻𝑾🇨🇳
+𝑺𝒑𝒐𝒕𝒊𝒇𝒚 = select, 𝑨𝒖𝒕𝒐 ⛷, 𝑺𝒆𝒍𝒆𝒄𝒕 🪁, 𝑳𝒐𝒂𝒅-𝑩𝒂𝒍𝒂𝒏𝒄𝒆 🏂, hidden=true
+𝑵𝒆𝒕𝒆𝒂𝒔𝒆𝑴𝒖𝒔𝒊𝒄 = select, DIRECT, 🎧
+𝑬𝒎𝒃𝒚 = select, 𝑺𝒆𝒍𝒆𝒄𝒕 🪁, DIRECT, hidden=true
+𝑮𝒍𝒐𝒃𝒂𝒍𝑴𝒆𝒅𝒊𝒂 = select, 𝑨𝒖𝒕𝒐 ⛷, hidden=true
+𝑻𝒆𝒍𝒆𝒈𝒓𝒂𝒎 = select, 𝑨𝒖𝒕𝒐 ⛷, 𝑺𝒆𝒍𝒆𝒄𝒕 🪁, 𝑳𝒐𝒂𝒅-𝑩𝒂𝒍𝒂𝒏𝒄𝒆 🏂, hidden=true
+𝑷𝒂𝒚𝒑𝒂𝒍 = select, DIRECT, 𝑷𝒓𝒐𝒙𝒚, hidden=true
+𝑨𝒑𝒑𝒍𝒆 = select, DIRECT, 𝑨𝒖𝒕𝒐 ⛷
+𝑮𝒖𝒂𝒓𝒅 = select, REJECT-TINYGIF, REJECT, DIRECT
+𝑱𝑷🇯🇵 = url-test, policy-path=订阅地址, policy-regex-filter=(日本|川日|东京|大阪|泉日|埼玉|日|JP|Japan), interval=600, tolerance=100, evaluate-before-use=true, hidden=true
+𝑻𝑾🇨🇳 = url-test, policy-path=订阅地址, policy-regex-filter=(台|新北|彰化|TW|Taiwan|台湾), interval=600, tolerance=100, evaluate-before-use=true, hidden=true
+𝑯𝑲🇭🇰 = url-test, policy-path=订阅地址, policy-regex-filter=(港|HK|Hong Kong|香港), interval=600, tolerance=100, evaluate-before-use=true, hidden=true
+
+[Rule]
+USER-AGENT,Surge/*,𝑷𝒓𝒐𝒙𝒚
+# Client For macOS
+# >  weibo
+DOMAIN,sdkapp.uve.weibo.com,DIRECT
+# > Proxy
+PROCESS-NAME,v2ray,DIRECT
+PROCESS-NAME,ss-local,DIRECT
+PROCESS-NAME,UUBooster,DIRECT
+# > Download
+PROCESS-NAME,aria2c,DIRECT
+PROCESS-NAME,fdm,DIRECT
+PROCESS-NAME,Folx,DIRECT
+PROCESS-NAME,NetTransport,DIRECT
+PROCESS-NAME,Thunder,DIRECT
+PROCESS-NAME,Transmission,DIRECT
+PROCESS-NAME,uTorrent,DIRECT
+PROCESS-NAME,WebTorrent,DIRECT
+PROCESS-NAME,WebTorrent Helper,DIRECT
+# CUSTOM Rules
+# > External Resources Update
+AND,((DOMAIN,raw.githubusercontent.com), (USER-AGENT,Surge*)),𝑭𝒊𝒏𝒂𝒍,notification-text="♻️External Resources Update",notification-interval=3600
+
+# RULE-SET
+# > Advertising
+DOMAIN-SET,https://anti-ad.net/surge2.txt,𝑮𝒖𝒂𝒓𝒅
+RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/Advertising.list,𝑮𝒖𝒂𝒓𝒅
+RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/Hijacking.list,𝑮𝒖𝒂𝒓𝒅
+RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/Privacy.list,𝑮𝒖𝒂𝒓𝒅
+# BlockOTA
+RULE-SET,https://github.com/DivineEngine/Profiles/raw/master/Surge/Ruleset/Extra/Apple/BlockiOSUpdate.list,𝑮𝒖𝒂𝒓𝒅
+# > Unbreak
+RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Unbreak.list,DIRECT
+# > Youtube、Netflix、Emby、Spotify、Tiktok
+RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Video/YouTube.list,𝒀𝒐𝒖𝒕𝒖𝒃𝒆
+RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Video/Netflix.list,𝑵𝒆𝒕𝒇𝒍𝒊𝒙
+RULE-SET,https://github.com/blankmagic/surge/raw/main/rule/media/emby.list,𝑬𝒎𝒃𝒚
+RULE-SET,https://github.com/DivineEngine/Profiles/raw/master/Surge/Ruleset/StreamingMedia/Music/Spotify.list,𝑺𝒑𝒐𝒕𝒊𝒇𝒚
+RULE-SET,https://github.com/Semporia/TikTok-Unlock/raw/master/Surge/TikTok.list,𝑷𝒓𝒐𝒙𝒚
+# > GlobalMedia Services
+RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Streaming.list,𝑮𝒍𝒐𝒃𝒂𝒍𝑴𝒆𝒅𝒊𝒂
+# > Twitter
+RULE-SET,https://github.com/DivineEngine/Profiles/raw/master/Surge/Ruleset/Extra/Twitter.list,𝑷𝒓𝒐𝒙𝒚
+# > Telegram
+RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Extra/Telegram/Telegram.list,𝑻𝒆𝒍𝒆𝒈𝒓𝒂𝒎
+# > Apple Services
+RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Extra/Apple/Apple.list,𝑨𝒑𝒑𝒍𝒆
+RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Extra/Apple/TestFlight.list,𝑷𝒓𝒐𝒙𝒚
+# >Unlock NeteaseMusic
+RULE-SET,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Media/Netease%20Music.list,𝑵𝒆𝒕𝒆𝒂𝒔𝒆𝑴𝒖𝒔𝒊𝒄
+# >Paypal
+RULE-SET,https://github.com/DivineEngine/Profiles/raw/master/Surge/Ruleset/Extra/PayPal.list,𝑷𝒂𝒚𝒑𝒂𝒍
+# >Speedtest
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Speedtest/Speedtest.list,𝑺𝒑𝒆𝒆𝒅𝒕𝒆𝒔𝒕
+# > Global
+RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Global.list,𝑨𝒖𝒕𝒐 ⛷
+# > China
+RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/China.list,DIRECT
+# Surge 的自动 REJECT 保护丢包，防止应用循环请求
+IP-CIDR,0.0.0.0/32,REJECT,no-resolve
+# Local Area Network
+RULE-SET,LAN,DIRECT
+# GeoIP China
+GEOIP,CN,DIRECT
+FINAL,𝑭𝒊𝒏𝒂𝒍,dns-failed
+
+[Host]
+# Firebase Cloud Messaging
+mtalk.google.com = 108.177.125.188
+# Google Dl
+dl.google.com = server:119.29.29.29
+dl.l.google.com = server:119.29.29.29
+
+[URL Rewrite]
+# Redirect Google Search Service
+^(http|https):\/\/(www.)?(g|google)\.cn https://www.google.com 302
+# Redirect Google Maps Service
+^(http|https):\/\/(ditu|maps).google\.cn https://maps.google.com 302
+# Safari 禁止知乎跳转至 App
+^https?://link\.zhihu\.com/\?target=https?%3A//(.*) https://$1 302
+^https?://oia\.zhihu\.com https://zhuanlan.zhihu.com 302
+# 将google/hk转到.com
+^(http|https):\/\/(www.)?(g|google)\.(cn|com\.hk) https://www.google.com 302
+
+[Header Rewrite]
+# Safari 禁止百度跳转至 App
+^https?:\/\/.*\.baidu\.com header-replace User-Agent "Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/16C50 Quark/604.1 T7/10.3 SearchCraft/2.6.3 (Baidu; P1 8.0.0)"
+
+[MITM]
+skip-server-cert-verify = true
+hostname = www.googlevideo.cn, ditu.google.cn, maps.google.cn, *baidu.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, -*.weibo.com, -CustomMitM
+ca-passphrase = 62392231
+ca-p12 = MIIKPAIBAzCCCgYGCSqGSIb3DQEHAaCCCfcEggnzMIIJ7zCCBF8GCSqGSIb3DQEHBqCCBFAwggRMAgEAMIIERQYJKoZIhvcNAQcBMBwGCiqGSIb3DQEMAQYwDgQIL20w/qSkXv8CAggAgIIEGPSITZf4x8vs9rmVG9ql7FIOLD9MD3PaONZsRUevwd2SCXFpSP8xNZI9+Hh188oEdNz8vQiYj/wzZO4sk+W8uCkfP+9D/l6lbBe6rPoM4DcDSPxXZ7o5RE3ND8y9bAtWGK9fbOwPEl9oSof9EdwCLVG0cty1ltfNPrxZsJz/rk8+1qdO6HyxZtjdnRtypcW5xKjejQ0OhcOr6ZOGSnUIYjWJjhQ+wf3v/bvUPbp/8ULqJpmIVlhaPEyQm8W5+JsKQpl5HwAYvQzIfjxH9rVoMa78bK9+1UruWWNL7pQH/GFPpQPIOBm1r9zsrk0B/evN4i0zVy+5JuuPLuCG4/zlAN3/UXHsTBQ2zXEVm/3YGivmGgy19w1bVDx3XCevrM2wivcwpTYMp8qym/MuhuTlL5Rg640f61RPD+KaChgWOCxhVs+bxg7uglAlP/KRYZyFwhybAChb19nMuuwZwlY0Kg8USGKaF5R7u+F0f999idTXT87Bi4ys7ZTx4J18z8RTPonvSjtF5MGAHma8DpiXeEckblGFVbQpN7O5CdVri73CwPazxqQ48Wk0by4+hu4XYwy1XG4ckfh/wzkr7KKKi11Jto0ds2WMonq9CQhp3xgWj7OAW4kvTyOLtrC1pYiZ4QOvDcbD/EMEdct5mZeNVnx/SapWx+LVq+eyM8iYdGcnlWRy6X7Rc30/tWQgscecYEwx6IMe22AW5q+1VMJM1ofi+lYpcaNVcCxdr9HDoECigADoFgu8hInRpYwa/ebQrjV7a3ioQzwehepx0Sb6R+N1M5gpDcdSuz718Qxhl/12BKLyfJjT0C91RfziWjBEtdKK4YyMe6XVdJA0pb9ZVjOHIsjqylUYIybsq97HlJp3FpLRw02JGZowujVb6DgwLdXcH4lIRq3/bl09cKIAxdocI99/vrNRPhycbBYqFEF4ux50/cJ7LQuJtcZY5H70zkZb+4Y7bTGX3/3fHkstHrnTZpnsscWa8Bh+0pn56Zd54L22T4J4Grf7byXU7CU5H4B6zP+7E21z6FQRNnQL25zdHra6NBLb79Z0EaI6pLa2outY9gdqOdskNdp+Cq4EB60UmkMpE/gr+YgRz0DRnCY2uBX9Ic7Ap6M4erhUP/XfGhLvd5mmpa+8+O+cSYdxcT0rDlF3rc+A0aO0Ruo+N7PkSkRxp3xIpleDW0Am1NMvbyv3teLwT7Wz+Hvr0aBtbAZKBMDKPrb0RUxALglahjeW0JUC+1JMuBW4wiwXkqGwh0eg108uru8e71wuS3gxznV7wW0k9Mf89dGTDvPxGYfoIs5X0SjBhEcyXrcEkphZtBRqcRXbBNyYskhJOtLE36j7nl4rnVexuJKtLPZVYAd6ou550+mUb4lA8SJGZvrqO/IxQFh8Tt0wggWIBgkqhkiG9w0BBwGgggV5BIIFdTCCBXEwggVtBgsqhkiG9w0BDAoBAqCCBO4wggTqMBwGCiqGSIb3DQEMAQMwDgQI6zgFmimNLCcCAggABIIEyDHF1hX5eiUJQ6ndD4iGt5tlTWz+pMpgZOv8/VimIEYYDp8P9hpO15ko4enlr9yN6hDW7SFI2SZY3gd+wGOK1/K2I9U3dxXyJJNSjM6CI1wCjz2mTAASG3LuCpN3RCB079icCJ7928xyUbmMXsLUK6WkxX955MMSWkMSQxkJa+DTS5CR4FjNpar3drQwAlDtJHoQbHLTt1RuH1kDLJJumhX5upc1k9iYAA0mAob3yQQKWPMWkusnzhA5ER09i4S6J0/Vl7+mPm/aACyUwuJ5soKEPZ6lFKmpcGNEgTpoEHh/rTbgg9DVHDZow30H5T6EF2KgrWWLuZUzLmY3vyQg1A9AoXnu1ckZhRMiPbE2gmghDJ0MIfq4YBUG3Uv95lA98dIvTaaYETN33/IYgF4yVsFa6jk7hzL0U8LK5fdbJCL0IIf2YM8Wj3XzLUpEEOsZpsvCjfZvQS8RUBX/GXNr6zDTXKVT+twWr8xKYZApgseHxzvHjcm4TQcRPaQJqW6VA66szOmolTuIL9DlivcExPV+QtEzgnBD5Kw97gv3ZYSWn3Eeshen6g5vfCl8ieY/AGzkB7uvZzg94Oy+3bdu7I8XJ1INxpOtspbDoRBNSPn4tkTIOub6CtlsGkj2lRA81XfgqG8VjouqOITbojVpY5kISDTawR0BaMWXicnVPdGWmG/fQpzVFB7y/cnWRSCm2rhKflqUDhpkME5HVXx+a8bJ1xZ+JlbVC0bDsxopk/SdM0B0Lh+Pe3X0URhl5Kcih4lF7FvIMKHVsc8RADbw7nUty/0/Qm4G89bOpur988p1gRDJxdHU1zJqkpifpK3kkPRNBMkWIYSt3DzOAh0VsXtz+Kaj6/c/ttmWhWLAMMgPxKM89wz0VOhroesXbdT1cg5x34arY6MUx+V1D3w8Z/5y3rGaqyMlOJtGHGMXOVoVrGrWMfmV9USuIx8Koz/OzCaqyYShBZPOF5cW132b3MTGenXtj/VRqZPx++uOwG6tG2896Rs8WDcxPF1NcZ3txD+lh671ZFzj9SODytd3g7Aq0djf/B8Qj92Hp7wjTZFuILAj+NpstprM0Bfvy2vbadXVJkB5A1hfMBMSoxNGEb39Vi2LX7KJHL/jI5mX12abQ5lrvtjmakgKoCjC9/tGNI9jXIBYt4ioKNWtvOjYD9EJicl4CLxy4leQs/HtPi4CLKF7lgCqDmf/OuFWBwqCngSzoTl0MrAzS1082Fvf7v2Z//I2egbWia4mFRooND8IjADgcV2PTisGxeAAP57SZ4pOLzXoxCzFBwX58EKKr+VHz8JNVr/trqy8I9sd6Z/fH/MH6hbdoGbHb7kM4Ju2L2lomZDu9dk14MrXB1iy4prUgRR2pdqkW64my2giOzgwtN8bPhIKVz0OViY4K/w82ta9Fje0zs0boto8fVWBh9aNTv8waJ9UHIn7ePln+XNAZ8rq9pvdWZdCF3ZEUTK6zEUjNsjXkL2RjvmFm4qKb8XBB+jKqNpAc1XvnZNSEDwDOZcsMJZ2LayZcL7ChDy03MVBnUxGxs4ztP4FCC//G4sHVMmHtMfLwyZ1LXRWgmQHZST97tuD9cqy+eOrgL7JuPWg3ZQz60Zj4vGTkXzNDowUW8O5L1a9pzFsMCMGCSqGSIb3DQEJFTEWBBSEr+SGR6LOSMdtC2RQQ5u2TbqZZDBFBgkqhkiG9w0BCRQxOB42AFMAdQByAGcAZQAgAEcAZQBuAGUAcgBhAHQAZQBkACAAQwBBACAANgAyADMAOQAyADIAMwAxMC0wITAJBgUrDgMCGgUABBQEFC0OcoPBHvnz2ciPlI0JM8z7fwQIB/ovJ8dYGIs=
+
+[Script]
+# 百度（全站替换为手机百度 Quark 的 User-Agent）仅 iPhone
+// BaiduChangeUA = type=http-request,pattern=^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/asset/BaiduChangeUA.js
+
+# 理解原理 - https://manual.nssurge.com/book/understanding-surge/cn/
+# 帮助中心 - https://nssurge.zendesk.com/
+# 技术社区 - https://community.nssurge.com
