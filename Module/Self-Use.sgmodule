@@ -152,9 +152,6 @@ luqi.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/S
 # > Fantastical 内购解锁 (By @sunshy)
 fantastical.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/fantastical.js,type=http-response,pattern=^https:\/\/api\.flexibits\.com\/v1\/(auth|account)\/(device|details|appstore-receipt)\/$
 
-# > Pear雪梨 unlock vip
-pear.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/pear.js,type=http-response,pattern=^https:\/\/(www\.baidu.com2\.club|ayk\.tmdidi\.com|m\.pearkin\.com|souhu\.mett\.me|bkcd\.b-cdn\.net)\/(api\/movie\/WatchMovie|api\/Account\/CheckVip|api\/account\/IndexDetail)
-# > 百度云VIP倍速播放
 百度云VIP倍速播放 = type=http-response,pattern=https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user,requires-body=1,max-size=0,timeout=20,script-path=https://raw.githubusercontent.com/TributePaulWalker/JavaScript/main/Baidu%20Cloud.js
 # > 疫情播报
 疫情播报 = type=cron,cronexp=0 8-23/1 * * *,wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/nCov.js,script-update-interval=0
