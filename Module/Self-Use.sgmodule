@@ -95,13 +95,7 @@ http-request ^https:\/\/sk\.ulysses\.app\/api\/v1\/user_offers$ script-path=http
 http-response ^https:\/\/sk\.ulysses\.app\/api\/v1\/itunes_receipt_verify$ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/ulysses.js
 
 # > Dayone
-# 1.启用本脚本与 pre 脚本
-# 2.重启 Day One，稍等片刻等待高级版出现
-# 3.禁用掉 pre 脚本，重启 Day One，确认高级版状况不变
-# pre_dayone
-// dayone-pre.js = debug=1,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/dayone-pre.js,type=http-request,pattern=^https:\/\/dayone\.me\/api\/users$
-dayone.surge.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/dayone.surge.js,script-update-interval=0,type=http-response,pattern=^https:\/\/dayone\.me\/api\/(users|v2\/users\/(account-status|receipt))$
-
+Dayone = type=http-response,pattern=^https:\/\/dayone\.(me|app)\/api\/(users|v2\/users\/(account-status|receipt))$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/dayone.js,script-update-interval=0
 # > itranslate
 itranslate.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/itranslate.js,script-update-interval=0,type=http-response,pattern=^https:\/\/ssl-api\.itranslateapp\.com\/.*\/subscriptions\/.*\/ios$
 # > photoshop
