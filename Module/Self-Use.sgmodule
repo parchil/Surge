@@ -99,7 +99,7 @@ Dayone = type=http-response,pattern=^https:\/\/dayone\.(me|app)\/api\/(users|v2\
 # > itranslate
 itranslate.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/itranslate.js,script-update-interval=0,type=http-response,pattern=^https:\/\/ssl-api\.itranslateapp\.com\/.*\/subscriptions\/.*\/ios$
 # > photoshop
-photoshop.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/photoshop.js,script-update-interval=0,type=http-response,pattern=^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile
+photoshop.js = requires-body=1,max-size=0,script-path= https://github.com/langkhach270389/Surge-LK/raw/main/scripts/langkhach/photoshop.js,script-update-interval=0,type=http-response,pattern=^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile
 # > draft
 draft.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/draft.js,script-update-interval=0,type=http-response,pattern=^https:\/\/backend\.getdrafts\.com\/api\/.*\/verification
 # > workingcopy.js
@@ -116,7 +116,7 @@ verify_receipt.js = requires-body=1,max-size=0,script-path=https://raw.githubuse
 # > boom
 verify_receipt.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/verify_receipt.js,script-update-interval=0,type=http-response,pattern=^https:\/\/apimboom2\.globaldelight\.net\/itunesreceipt_v2\.php$
 # > musixmatch
-musixmatch.miao.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/musixmatch.miao.js,script-update-interval=0,type=http-response,pattern=^https:\/\/apic\.musixmatch\.com\/ws\/.*\/config\.get
+musixmatch.miao.js = requires-body=1,max-size=0,script-path= https://github.com/langkhach270389/Surge-LK/raw/main/scripts/langkhach/musixmatch.js,script-update-interval=0,type=http-response,pattern=^https:\/\/apic\.musixmatch\.com\/ws\/.*\/config\.get
 # > productive&sleepzy
 Productive = type=http-response,pattern=^https:\/\/subs\.platforms\.team\/.+\/apple\/verify$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/productive.js,script-update-interval=0
 # > Pdfexpert
