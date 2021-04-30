@@ -1,0 +1,5 @@
+#!name=drafts unlock
+#!desc=drafts unlock
+[Script]
+# > draft
+draft.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/draft.js,script-update-interval=0,type=http-response,pattern=^https:\/\/backend\.getdrafts\.com\/api\/.*\/verification
