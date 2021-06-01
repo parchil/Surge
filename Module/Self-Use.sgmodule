@@ -19,7 +19,6 @@ http-response ^https?://ios\.prod\.ftl\.netflix\.com/iosui/warmer/.+type=show-at
 
 # > 微信 App 内被屏蔽链接快捷跳转
 weixin110.js = type=http-response,requires-body=1,max-size=-1,pattern=^https?:\/\/weixin110\.qq\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi,script-path=https://raw.githubusercontent.com/HotKids/Rules/master/Script/weixin110.js
-http-response https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Script/Bilibili/BiliHD.js, tag=Bilipj
 
 # 公众号墨鱼手记    https://github.com/ddgksf2013
 http-response ^http:\/\/duoting\.tatatimes\.com\/tataeraapi\/api\.s\?h=QueryVipUser url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/englishread.js,tag=英语阅读
