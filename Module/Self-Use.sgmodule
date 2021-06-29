@@ -66,7 +66,7 @@ http-response ^https://account.wps.*/api/users/ requires-body=1,script-path=http
 http-response ^https:\/\/viva\.v21xy\.com\/api\/rest\/u\/vip requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/vivavideo.js, tag=小影
 http-response ^https?:\/\/api.bjxkhc.com\/index\.php\/app\/ios\/(vod\/show|(user|vod|topic|type)\/index) requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/aimeiju.js, tag=爱美剧
 http-response ^https?:\/\/api\.vnision\.com\/v1\/(users\/|banners) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/dapian.js, tag=大片-视频编辑器
-
+http-response https:\/\/api\.vuevideo\.net\/api\/v1\/(users\/.+\/profile|subtitle\/prepare) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/VUE.js
 #其他vip破解js
 
 # > VSCO滤镜VIP
@@ -99,8 +99,7 @@ itranslate.js = requires-body=1,max-size=0,script-path=https://raw.githubusercon
 photoshop.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/photoshop.js,script-update-interval=0,type=http-response,pattern=^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile
 # > draft
 draft.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/draft.js,script-update-interval=0,type=http-response,pattern=^https:\/\/backend\.getdrafts\.com\/api\/.*\/verification
-# > workingcopy.js
-workingcopy.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/workingcopy.js,script-update-interval=0,type=http-response,pattern=^https:\/\/education\.github\.com\/api\/user$
+
 # > speak&translate
 speak&translate.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/speak&translate.js,script-update-interval=0,type=http-response,pattern=^https:\/\/receipt-validator\.herewetest\.com\/apple\/verifyTransaction$
 # > over
@@ -149,7 +148,7 @@ Fantastical = type=http-response,pattern=^https:\/\/api\.flexibits\.com\/v1\/(au
 # >微博去广告
 微博开屏去广告 = type=http-response,pattern=^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua),requires-body=1,max-size=0,timeout=30,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_launch.js,script-update-interval=0
 微博去广告 = type=http-response,pattern=^https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positives/get|(friends|video)(/|_)(mix)?timeline)|stories/(video_stream|home_list)|(groups|fangle)/timeline|profile/statuses|comments/build_comments|photo/recommend_list|service/picfeed|searchall|cardlist|page|!/photos/pic_recommend_status|video/tiny_stream_video_list|photo/info),requires-body=1,max-size=-1,timeout=30,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_ad.js,script-update-interval=0
-酷我音乐VIP = type=http-response,pattern=^https?:\/\/vip1\.kuwo\.cn\/(vip\/v2\/user\/vip|vip\/spi/mservice),requires-body=1,max-size=0,timeout=60,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Kuwo.js
+
 # > 疫情播报
 疫情播报 = type=cron,cronexp=0 8-22/2 * * *,wake-system=1,timeout=60,script-path=https://gist.githubusercontent.com/TributePaulWalker/4d8d6cb9bce089d3faa9a4d057c4370f/raw/nCov.js
 # > TestFlight
@@ -157,4 +156,4 @@ TestFlight下载修正 = type=http-request,pattern=^https?:\/\/testflight\.apple
 # Boxjs.net
 BoxJs = type=http-request,pattern=^https?://boxjs.net,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, requires-body=true, timeout=120
 [MITM]
-hostname = %APPEND% dayone.*, trade-acs.m.taobao.com,api.m.jd.com,mp.weixin.qq.com, ios.prod.ftl.netflix.com,*.baidu.com,pan.baidu.com,  dayone.*, testflight.apple.com, weixin110.qq.com,tncj.hortorgames.com,api.weibo.cn,mapi.weibo.com,*.uve.weibo.com,ios.prod.ftl.netflix.com,duoting.tatatimes.com, cm.szsszykj.com, avoscloud.com, api.flexibits.com, d.syshhc.top, 115.28.168.103, dbapi.ganbuguo.com,api.591master.com, www.mindmeister.com, sports.lifesense.com, api.pushover.net, subs.platforms.team, api.hulusaas.com, snailsleep.net,music.snailsleep.net,community.snailsleep.net, api.jiaonizuocai.com, nmeditation.snailsleep.net, claritywallpaper.com, subscription-service.neuralprisma.com, mappsv5.caixin.com, diary.7english.cn, api.gotokeep.com, *.ddly666.top, hkj178.com, a.jxjt888.top, lysl2020.com, www.i3zh.com,mb3admin.com,api2.mubu.com,mp.weixin.qq.com,r.inews.qq.com,m.client.10010.com,api.revenuecat.com,vip1.kuwo.cn,api.gamer.com.tw,ap*.intsig.net,newdrugs.dxy.cn,account.wps.cn,viva.v21xy.com,api.bjxkhc.com,api.vnision.com,api.bilibili.com, mp.weixin.qq.com,vsco.co,dayone.me ,apic.musixmatch.com,photos.adobe.io, license.pdfexpert.com,bmall.camera360.com,api.busuu.com,accounts.elevateapp.net, purchases.ws.pho.to, api-intl.mr.meitu.com,api.unfold.app,ssl-api.itranslateapp.com,apimboom2.globaldelight.net,api.flexibits.com,www.luqijianggushi.com,bkcd.b-cdn.net, souhu.mett.me, ayk.tmdidi.com, m.pearkin.com, www.baidu.com2.club
+hostname = %APPEND% dayone.*, trade-acs.m.taobao.com,api.m.jd.com,mp.weixin.qq.com, api.revenuecat.com, api.vuevideo.net, ios.prod.ftl.netflix.com,*.baidu.com,pan.baidu.com,  dayone.*, testflight.apple.com, weixin110.qq.com,tncj.hortorgames.com,api.weibo.cn,mapi.weibo.com,*.uve.weibo.com,ios.prod.ftl.netflix.com,duoting.tatatimes.com, cm.szsszykj.com, avoscloud.com, api.flexibits.com, d.syshhc.top, 115.28.168.103, dbapi.ganbuguo.com,api.591master.com, www.mindmeister.com, sports.lifesense.com, api.pushover.net, subs.platforms.team, api.hulusaas.com, snailsleep.net,music.snailsleep.net,community.snailsleep.net, api.jiaonizuocai.com, nmeditation.snailsleep.net, claritywallpaper.com, subscription-service.neuralprisma.com, mappsv5.caixin.com, diary.7english.cn, api.gotokeep.com, *.ddly666.top, hkj178.com, a.jxjt888.top, lysl2020.com, www.i3zh.com,mb3admin.com,api2.mubu.com,mp.weixin.qq.com,r.inews.qq.com,m.client.10010.com,api.revenuecat.com,vip1.kuwo.cn,api.gamer.com.tw,ap*.intsig.net,newdrugs.dxy.cn,account.wps.cn,viva.v21xy.com,api.bjxkhc.com,api.vnision.com,api.bilibili.com, mp.weixin.qq.com,vsco.co,dayone.me ,apic.musixmatch.com,photos.adobe.io, license.pdfexpert.com,bmall.camera360.com,api.busuu.com,accounts.elevateapp.net, purchases.ws.pho.to, api-intl.mr.meitu.com,api.unfold.app,ssl-api.itranslateapp.com,apimboom2.globaldelight.net,api.flexibits.com,www.luqijianggushi.com,bkcd.b-cdn.net, souhu.mett.me, ayk.tmdidi.com, m.pearkin.com, www.baidu.com2.club
