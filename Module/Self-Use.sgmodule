@@ -75,10 +75,10 @@ vsco.js = requires-body=1,script-path=https://raw.githubusercontent.com/nzw9314/
 # > Langkhach越南老哥
 
 # > all apps monkey
-monkey.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/monkey.js,script-update-interval=0,type=http-response,pattern=^https:\/\/www\.api\.monkeyuni\.net\/api\/.+\/mobile\/account\/load-update
+monkey.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/monkey.js,script-update-interval=0,type=http-response,pattern=^https:\/\/www\.api\.monkeyuni\.net\/api\/.+\/mobile\/account\/load-update
 
 # > Faded
-Faded.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/Faded.js,script-update-interval=0,type=http-response,pattern=^https:\/\/api\.madewithfaded\.com\/api\/.+\/subscription\/validate$
+Faded.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/faded.js,script-update-interval=0,type=http-response,pattern=^https:\/\/api\.madewithfaded\.com\/api\/.+\/subscription\/validate$
 remove-nonematch.js = script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/remove-nonematch.js,script-update-interval=0,type=http-request,pattern=^https:\/\/secure\.istreamer\.com\/backend$
 # > grammarly
 grammarly.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/grammarly.js,script-update-interval=0,type=http-response,pattern=^https:\/\/subscription\.grammarly\.com\/api\/v1$
@@ -104,7 +104,7 @@ workingcopy.js = requires-body=1,max-size=0,script-path=https://raw.githubuserco
 # > speak&translate
 speak&translate.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/speak&translate.js,script-update-interval=0,type=http-response,pattern=^https:\/\/receipt-validator\.herewetest\.com\/apple\/verifyTransaction$
 # > over
-over.vip.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/over.vip.js,script-update-interval=0,type=http-response,pattern=^https:\/\/api\.overhq\.com\/(user\/token\/refresh$|subscription\/verifyReceipt$)
+over.vip.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/over.js,script-update-interval=0,type=http-response,pattern=^https:\/\/api\.overhq\.com\/(user\/token\/refresh$|subscription\/verifyReceipt$)
 # > musicalm
 musicalm.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/musicalm.js,script-update-interval=0,type=http-response,pattern=^https:\/\/www\.peacefulsoundsapp\.com\/api\/v1\/init$
 # > Bright
@@ -121,20 +121,20 @@ Pdfexpert.vip.js = requires-body=1,max-size=0,script-path=https://raw.githubuser
 # > Lightroom
 Lightroom.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/lightroom.js,script-update-interval=0,type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts
 # > calm
-calm.vip.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/calm.vip.js,script-update-interval=0,type=http-response,pattern=^https:\/\/api\.calm\.com\/(me$|receipt$)
+calm.vip.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/calm.js,script-update-interval=0,type=http-response,pattern=^https:\/\/api\.calm\.com\/(me$|receipt$)
 # > camera360
 camera360.vip.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/camera360.js,script-update-interval=0,type=http-response,pattern=^https:\/\/bmall\.camera360\.com\/api\/(iap\/check-receipt$|mix\/getinfo$)
 # > beautyplus
 beautyplusvip.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/beautyplusvip.js,script-update-interval=0,type=http-response,pattern=^https:\/\/api-intl\.mr\.meitu\.com/.*/subs_offer_elg$
 # > elevate
-elevate.vip.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/elevate.vip.js,script-update-interval=0,type=http-response,pattern=^https:\/\/accounts\.elevateapp\.net\/api\/users\?user%5Bauthentication_token
+elevate.vip.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/elevate.js,script-update-interval=0,type=http-response,pattern=^https:\/\/accounts\.elevateapp\.net\/api\/users\?user%5Bauthentication_token
 # > busuu
 busuu.vip.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/busuu.js,script-update-interval=0,type=http-response,pattern=^https:\/\/api\.busuu\.com\/users\/me
 # > drops
 drops.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/drops.js,script-update-interval=0,type=http-response,pattern=^https:\/\/lambda\.us-east-1\.amazonaws\.com/.*/functions\/prod-4-syncPurchases\/invocations$
 
 # > Unfold
-Unfold.vip.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/Unfold.vip.js,script-update-interval=0,type=http-response,pattern=^https:\/\/api\.unfold\.app\/v1\/ios\/receipts$
+Unfold.vip.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/unfold.js,script-update-interval=0,type=http-response,pattern=^https:\/\/api\.unfold\.app\/v1\/ios\/receipts$
 # > Buyhack
 verify_receipt.js = requires-body=1,max-size=262144,script-path=https://raw.githubusercontent.com/langkhach270389/SSurge-LK/main/scripts/langkhach/verify_receipt.js,script-update-interval=0,type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
 #luqi讲故事
