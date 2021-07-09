@@ -1,8 +1,8 @@
-网易1 = http,106.52.127.72,19951
-网易2 = http,3music.poetyin.me,100
-网易3 = http,block4music.poetyin.me,39000
-网易4 = Shadowsocks,blockmusic.poetyin.me,30003,aes-128-gcm,"desperadoj.com_free_proxy_x80j"
-网易5 = Shadowsocks,music.desperadoj.com,30001,aes-128-gcm,"desperadoj.com_free_proxy_d39m"
-网易6 = Shadowsocks,music.desperadoj.com,30003,aes-128-gcm,"desperadoj.com_free_proxy_d39m"
-网易7 = Shadowsocks,proxy.plusmedia.site,58080,rc4-md5,"ieG9l1nte5eo7IBZas84jLi"
-网易8 = Shadowsocks,proxy.plusmedia.site,58081,rc4-md5,"ieG9l1nte5eo7IBZas84jLi"
+http,106.52.127.72,19951,tag=music1
+http,3music.poetyin.me,100, tag=music2
+http,block4music.poetyin.me,39000 , tag=music3
+Shadowsocks,blockmusic.poetyin.me,30003,aes-128-gcm,"desperadoj.com_free_proxy_x80j", tag=music4
+Shadowsocks,music.desperadoj.com,30001,aes-128-gcm,"desperadoj.com_free_proxy_d39m", tag=music5
+Shadowsocks,music.desperadoj.com,30003,aes-128-gcm,"desperadoj.com_free_proxy_d39m", tag=music6
+Shadowsocks,proxy.plusmedia.site,58080,rc4-md5,"ieG9l1nte5eo7IBZas84jLi", tag=music7
+Shadowsocks,proxy.plusmedia.site,58081,rc4-md5,"ieG9l1nte5eo7IBZas84jLi", tag=music8
