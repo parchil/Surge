@@ -65,7 +65,7 @@ if (!v4.primaryAddress && !v6.primaryAddress) {
         `节点位置 : ${getFlagEmoji(info.countryCode)} | ${info.country} - ${info.city
         }`,
       icon: wifi.ssid ? 'globe.asia.australia' : 'airplayaudio.circle',
-      'icon-color': wifi.ssid ? '#89C3EB' : '#F9BF45',
+      'icon-color': wifi.ssid ? '#4D4398' : '#F9BF45',
     });
   });
 }
