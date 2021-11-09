@@ -1,5 +1,5 @@
 /*
- * Surge 網路詳情面板
+ * Surge 网络详情面板
  * @Nebulosa-Cat
  * 詳情請見 README
  */
@@ -39,7 +39,7 @@ if (!v4.primaryAddress && !v6.primaryAddress) {
     if (carrierId && radio) {
       cellularInfo = carrierNames[carrierId] ?
         carrierNames[carrierId] + ' | ' + radioGeneration[radio] + ' - ' + radio :
-        '行動數據 | ' + radioGeneration[radio] + ' - ' + radio;
+        '移动数据 | ' + radioGeneration[radio] + ' - ' + radio;
     }
   }
   $httpClient.get('http://ip-api.com/json', function (error, response, data) {
@@ -60,9 +60,9 @@ if (!v4.primaryAddress && !v6.primaryAddress) {
         (v6.primaryAddress ? `IPv6 : ${v6.primaryAddress}\n` : '') +
         (v4.primaryRouter && wifi.ssid ? `Router IPv4 : ${v4.primaryRouter}\n` : '') +
         (v6.primaryRouter && wifi.ssid ? `Router IPv6 : ${v6.primaryRouter}\n` : '') +
-        `節點 IP : ${info.query}\n` +
-        `節點 ISP : ${info.isp}\n` +
-        `節點位置 : ${getFlagEmoji(info.countryCode)} | ${info.country} - ${info.city
+        `节点 IP : ${info.query}\n` +
+        `节点 ISP : ${info.isp}\n` +
+        `节点位置 : ${getFlagEmoji(info.countryCode)} | ${info.country} - ${info.city
         }`,
       icon: wifi.ssid ? 'globe.asia.australia' : 'airplayaudio.circle',
       'icon-color': wifi.ssid ? '#005CAF' : '#F9BF45',
