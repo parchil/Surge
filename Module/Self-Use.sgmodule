@@ -87,10 +87,6 @@ splice.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent
 # > planner5d
 planner5d.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/planner5d.js,script-update-interval=0,type=http-response,pattern=^https:\/\/planner5d\.com\/api\/sets
 
-# > Ulysses
-http-request ^https:\/\/sk\.ulysses\.app\/api\/v1\/user_offers$ script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/cleancacheulysses.js
-http-response ^https:\/\/sk\.ulysses\.app\/api\/v1\/itunes_receipt_verify$ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/ulysses.js
-
 # > Dayone
 Dayone = type=http-response,pattern=^https:\/\/dayone\.(me|app)\/api\/(users|v2\/users\/(account-status|receipt))$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/dayone.js,script-update-interval=0
 # > itranslate
