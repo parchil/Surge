@@ -1,0 +1,8 @@
+#!name=Notanility
+#!desc=Notability Premium
+
+[Script]
+http-response https://notability.com/subscriptions script-path=https://raw.githubusercontent.com/parchil/Surge/main/js/Notability.js, requires-body=1, tag=Notability
+
+[MITM]
+hostname = notability.com
