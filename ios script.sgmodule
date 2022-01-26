@@ -58,4 +58,4 @@ Picsew Pro = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/ve
 
 
 [MITM]
-hostname = %APPEND%  spclient.wg.spotify.com,tagit.hyhuo.com,*.wtzw.com,note.youdao.com,dida365.com, ticktick.com,p.du.163.com,app.58.com,passport.58.com,buy.itunes.apple.com,biz.caiyunapp.com, pan.baidu.com,api.shayujizhang.com,*api.adguard.com,dayone.*,license.pdfexpert.com,www.google.*,license.enpass.io,api.flexibits.com,photos.adobe.io,api.busuu.com,api.revenuecat.com,vsco.co,api.vuevideo.net,account.wps.cn
+hostname = %APPEND% spclient.wg.spotify.com,tagit.hyhuo.com,*.wtzw.com,note.youdao.com,dida365.com,ticktick.com,p.du.163.com,app.58.com,passport.58.com,buy.itunes.apple.com,biz.caiyunapp.com,pan.baidu.com,api.shayujizhang.com,*api.adguard.com,dayone.*,license.pdfexpert.com,www.google.*,license.enpass.io,api.flexibits.com,photos.adobe.io,api.busuu.com,api.revenuecat.com,vsco.co,api.vuevideo.net,account.wps.cn
