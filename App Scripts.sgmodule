@@ -47,7 +47,7 @@ QMXS = type=http-response,pattern=^https?:\/\/(api-\w+|xiaoshuo)\.wtzw\.com\/api
 >有道云笔记
 有道云笔记 SVIP = type=http-response, pattern=^https://note.youdao.com/yws/(mapi/payment|api/self), requires-body=1, max-size=-1, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/ydybj.js
 >滴答清单vip
-滴答清单 VIP = type=http-response, pattern=^https:\/\/(ticktick|dida365)\.com\/api\/v2\/user\/status, requires-body=1, max-size=-1, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/DiDaQingDan.js
+滴答清单 VIP = type=http-response, pattern=^https:\/\/(ticktick|dida365)\.com\/api\/v2\/user\/status, requires-body=1, max-size=-1, script-path= https://raw.githubusercontent.com/parchil/Surge/main/js/Didaqingdan.js
 >网易蜗牛读书
 网易蜗牛读书VIP = type=http-response, pattern=^https?:\/\/p\.du\.163\.com\/gain\/readtime\/info\.json, requires-body=1, max-size=-1, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/wnyd.js
 >58同城
