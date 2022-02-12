@@ -11,7 +11,7 @@ if ($trigger == "button") await httpAPI("/v1/profiles/reload");
 
   $done({
       title:"Surge Pro ®",
-      content: Licenses: 2022-11-05
+      content: `Licenses: 2022-11-05`
                 `启动时长: ${startTime}`,
 		icon: params.icon,
 		"icon-color":params.color
