@@ -11,7 +11,8 @@ Sub-Store = type=http-request,pattern=^https?:\/\/sub\.store,requires-body=1,max
 BoxJs = type=http-request,pattern=^https?://boxjs.net,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, requires-body=true, timeout=120
 
 # > TestFlight Download (testflight.apple.com)
-TestFlight = type=http-request,pattern=^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/chiupam/surge/main/scripts/tf_download.js
+
+TF下载修正 = type=http-request,pattern=^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$,requires-body=1,script-update-interval=-1,max-size=0,script-path=https://gist.githubusercontent.com/NobyDa/9be418b93afc5e9c8a8f4d28ae403cf2/raw/TF_Download.js
 
 # > 微博开屏广告 (api.weibo.cn, mapi.weibo.com, *.uve.weibo.com)
 微博去开屏广告 = type=http-response, pattern=^https?://m?api\.weibo\.c(n|om)/2/(cardlist|searchall|page|statuses/(unread_)?friends(/|_)timeline|groups/timeline|statuses/(unread_hot_timeline|extend|video_mixtimeline)|profile/(me|statuses)|video/(community_tab|remind_info|tiny_stream_video_list)|checkin/show|\!/live/media_homelist|comments/build_comments|container/get_item),requires-body=1, max-size=1, script-path=https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_main.js
