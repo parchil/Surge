@@ -39,9 +39,9 @@ http-response https:\/\/api\.vuevideo\.net\/api\/v1\/(users\/.+\/profile|subtitl
 >WPS
 http-response ^https?:\/\/account\.wps\.cn\/api\/users requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js
 >Spotify Premium(音质只能到高)
-Spotify-proto = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js,script-update-interval=0
+//Spotify-proto = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js,script-update-interval=0
 >拦截100 vip
-http-response ^https?:\/\/tagit\.hyhuo\.com\/cypt\/block100\/get_vip_info$ script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/Block100SVIPCrack.js, requires-body=1, tag=LJ100
+//http-response ^https?:\/\/tagit\.hyhuo\.com\/cypt\/block100\/get_vip_info$ script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/Block100SVIPCrack.js, requires-body=1, tag=LJ100
 >QMXS
 QMXS = type=http-response,pattern=^https?:\/\/(api-\w+|xiaoshuo)\.wtzw\.com\/api\/v\d\/,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/QiMaoXiaoShuo.js
 >有道云笔记
