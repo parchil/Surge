@@ -9,7 +9,7 @@ const REQUEST_HEADERS = {
     title: 'Streaming 解锁检测',
     content: '',
     icon: 'livephoto.play',
-    'icon-color': '#478384',
+    'icon-color': '#006E54',
   }
   await Promise.all([check_netflix(), check_youtube_premium()])
     .then((result) => {
