@@ -1,0 +1,207 @@
+#!name=JD iOS Tasks&Cookies Module all
+#!desc=薅京豆
+#!system=ios
+
+[Script]
+
+#京东获取cookie
+
+获取京东Cookie = type=http-request,pattern=^https:\/\/wq\.jd\.com\/user_new\/info\/GetJDUserInfoUnion,script-path=https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/JD_extra_cookie.js
+
+京东多合一签到 = type=cron,cronexp=5 0 * * *,wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+
+获取京东Cookie = type=http-request,requires-body=1,pattern=^https:\/\/(api\.m|me-api|ms\.jr)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?|gw\/generic\/hy\/h5\/m\/appSign\?),script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+
+#京东极速版签到40min
+京东极速版签到= type=cron,cronexp="0 7,19 * * *", wake-system=1,timeout=120, script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_speed_sign.js
+
+#京东极速版红包
+京东极速版红包= type=cron,cronexp="10 0,22 * * *", wake-system=1,timeout=120, script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_speed_redpocke.js
+
+#京东极速版
+京东极速版= type=cron,cronexp="121 3,8 * * * ", wake-system=1,timeout=120, script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/main/Task/JD/jd_speed_signfaker.js
+# 京东活动
+东东农场 = type=cron,cronexp="5 6-18/6 * * *",wake-system=1,timeout=120,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_fruit.js
+东东萌宠 = type=cron,cronexp="15 6-18/6 * * *",wake-system=1,timeout=120,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/main/Task/JD/jd_petrw.js
+
+京东种豆得豆 = type=cron,cronexp="1 7-21/2 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_plantBean.js
+
+plus得金豆 = type=cron,cronexp="18 1 * * * ", wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/main/Task/JD/jd_plusLottery.js
+
+汪汪乐园 = type=cron,cronexp="0 0,7,9,17,20 * * * ",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/main/Task/JD/jd_joy_park_task.js
+
+内容鉴赏官 = type=cron,cronexp="15 3,6 * * * ", wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/main/Task/JD/jd_connoisseur.js
+
+摇金豆= type=cron,cronexp="5 0,23 * * * ", wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/main/Task/JD/jd_club_lottery.js
+
+微信签到领现金= type=cron,cronexp="16 0,5 * * * ", wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_cash_wx.js
+
+天天加速 = type=cron,cronexp="8 0-23/3 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_speed.js
+
+摇钱树 = type=cron,cronexp="3 0-23/2 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_moneyTree.js
+
+取关店铺商品 = type=cron,cronexp="55 23 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_unsubscribe.js
+
+东东超市 = type=cron,cronexp="11 * * * *",wake-system=1,timeout=320,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_superMarket.js
+
+京小超兑换奖品 = type=cron,cronexp="0 0 0 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/jd_blueCoin.js
+
+进店领豆 = type=cron,cronexp="10 0 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/main/Task/JD/jd_shop.js
+
+摇京豆 = type=cron,cronexp="5 0 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/jd_club_lottery.js
+
+京东全民开红包 = type=cron,cronexp="1 1 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/jd_redPacket.js
+
+京东赚赚 = type=cron,cronexp="10 0 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_jdzz.js
+
+京豆变动通知 = type=cron,cronexp="30 8,22 * * * ", wake-system=1,timeout=440,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_bean_change.js
+
+京喜工厂 = type=cron,cronexp="10 * * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_dreamFactory.js
+
+京东直播 = type=cron,cronexp="10-20/5 12 * * * ", wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_live.js
+
+京东价保 = type=cron,cronexp="11 7 * * * ", wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_priceProtect.js
+
+京东魔方 = type=cron,cronexp="31 2,8 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_mf.js
+
+限时抢金豆= type=cron,cronexp="23 7,9 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_xsqjd.js
+
+众筹许愿池= type=cron,cronexp="40 0,2 * * * ", wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_wish.js
+
+女装盲盒= type=cron,cronexp="35 1,23 * * *  ", wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_nzmh.js
+
+整点京豆雨= type=cron,cronexp="0 * * * *  ", wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/main/Task/JD/jd_redrain.js
+
+整点京豆雨= type=cron,cronexp="31 20-23/1 * * *  ", wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/main/Task/JD/jd_redrain_half.js
+
+推一推= type=cron,cronexp="0 0 * * * ", wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/main/Task/JD/jd_tyt.js
+
+京东签到图形验证= type=cron,cronexp="14 10 * * * ", wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/main/Task/JD/jd_sign_graphics.js
+
+京东农场好友删减奖励= type=cron,cronexp="10 5,17 * * * ", wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_fruit_friend.js
+
+京东通天塔= type=cron,cronexp="3 0 * * *  ", wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_m_sign.js
+
+大牌联合年货盛宴= type=cron,cronexp="0 * * * * ",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_rush_lzdz1_nh.js
+
+京喜签到 = type=cron,cronexp="20 1,8 * * * ", wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_jxsign.js
+
+东东小窝 = type=cron,cronexp="16 0 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/jd_small_home.js
+
+东东工厂 = type=cron,cronexp="10 * * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_factory.js
+
+点点券 = type=cron,cronexp="10 0,20 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_necklace.js
+
+赚京豆 = type=cron,cronexp="110 0,7,23 * * * ", wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_syj.js
+
+领京豆额外奖励 = type=cron,cronexp="10 7 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_bean_home.js
+
+京东汽车 = type=cron,cronexp="10 7 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_car.js
+
+京东汽车兑换 = type=cron,cronexp="0 0 * * *",wake-system=1,timeout=2000,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_car_exchange.js
+
+京东快递签到 = type=cron,cronexp="10 0 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_kd.js
+
+京东金融-天天提鹅 = type=cron,cronexp="0 * /3 * * * ",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/jd_daily_egg.js
+
+京东金融-养猪猪 = type=cron,cronexp="12 0-23/6 * * *",wake-system=1,timeout=100,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_pigPet.js
+
+CrazyJoy任务 = type=cron,cronexp="10 7 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/jd_crazy_joy.js
+
+口袋书店 = type=cron,cronexp="1 8,12,18 * * *",wake-system=1,timeout=1120,script-path=https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/jd_bookshop.js
+
+签到领现金 = type=cron,cronexp="0 0-23/4 * * * ",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_cash.js
+
+东东健康社区 = type=cron,cronexp="13 1,6,22 * * * ", wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_health.js
+
+东东健康社区收集能量 = type=cron,cronexp="5-45/20 * * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_health_collect.js
+
+幸运大转盘 = type=cron,cronexp="4 10 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_market_lottery.js
+
+领金贴 = type=cron,cronexp="10 0 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_jintie.js
+
+金榜创造营 = type=cron,cronexp="13 1,22 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_gold_creator.js
+
+京喜领88元红包 = type=cron,cronexp="4 10 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/jd_jxlhb.js
+
+省钱大赢家之翻翻乐 = type=cron,cronexp="20 * * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_big_winner.js
+
+京喜牧场 = type=cron,cronexp="20 * * * * ", wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_jxmc.js
+
+京喜农场 = type=cron,cronexp="0 9,12,18 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_jxnc.js
+
+获取互助码 = type=cron,cronexp="20 13 * * 6",wake-system=1,timeout=120,script-path=https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/jd_get_share_code.js
+
+京东秒秒币 = type=cron,cronexp="10 7 * * *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_ms.js
+
+抽奖机 = type=cron,cronexp="10 7 * * * ",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_lotteryMachine.js
+
+京喜工厂plus = type=cron,cronexp="0 1,18 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_factory_component.js
+
+京东金榜= type=cron,cronexp="13 6 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/main/Task/JD/jd_gold_sign.js
+
+京东金榜年终奖= type=cron,cronexp="10 0,2 * * * ", wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_split.js
+
+京喜工厂助力= type=cron,cronexp="50 * * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_dreamFactory_help.js
+
+京东锦鲤红包= type=cron,cronexp="1 1 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_redPacket.js
+
+跳跳乐刮分京东= type=cron,cronexp="1 0,11,21 * * * ", wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_jump.js
+
+删除优惠券= type=cron,cronexp="11 0 * * 1 ,",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_delCoupon.js
+
+东东超市少年兑换奖品= type=cron,cronexp=""0 0 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_blueCoin.js
+
+
+财富岛热气球= type=cron,cronexp="30 * * * * ", wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_cfd_loop.js
+
+财富岛合成月饼= type=cron,cronexp="5 * * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_cfd_mooncake.js
+
+京喜财富岛= type=cron,cronexp="0 0,6-23 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_cfd.js
+
+财富大陆互助= type=cron,cronexp="18 0,1,9,14,18 * * * ",
+wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_wealth_island_help.js
+
+财富大陆= type=cron,cronexp="18 0-23/2 * * * ",
+wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_wealth_island.js
+
+东东世界= type=cron,cronexp="17 10 * * * ",
+wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_ddworld.js
+
+东东世界兑换= type=cron,cronexp="0 0 * * *  ",
+wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_ddworld_exchange.js
+
+MM领京豆= type=cron,cronexp="21 9 * * * ",
+wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_MMdou.js
+
+闪购盲盒= type=cron,cronexp="20 8 * * * ",
+wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_sgmh.js
+
+京东饭粒= type=cron,cronexp="10 8 * * * ",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/main/Task/JD/jd_fanli.js
+
+东东乐园= type=cron,cronexp="30 7 * * * ",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/main/Task/JD/jd_ddly.js
+
+大牌好礼带回家= type=cron,cronexp="20 8 * * *  ", wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/main/Task/JD/jd_lzdz1_customized10.js
+
+头文字J= type=cron,cronexp="10 8 * * *   ", wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/main/Task/JD/jd_mpdzcar.js
+
+头文字J游戏= type=cron,cronexp="10 6,10,12 * * * ",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_mpdzcar_game.js
+
+京享周周乐= type=cron,cronexp="2 6 * * 5 ",  wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/master/Task/JD/jd_xs_zzl.js
+
+京东小魔方= type=cron,cronexp="31 8 * * *  ", wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/main/Task/JD/jd_mofang_ex.js
+
+特务Z= type=cron,cronexp="23 8,9 * * *  ", wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/main/Task/JD/jd_tewu.js
+
+京喜签到= type=cron,cronexp="20 1,8 * * *  ", wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/main/Task/JD/jx_sign.js
+
+喜豆= type=cron,cronexp="30 2,9 * * * ", wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/main/Task/JD/jx_sign_xd.js
+
+伊利养牛记= type=cron,cronexp="38 5,18 * * * ", wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/main/Task/JD/jd_ylyn.js
+
+京东生鲜每日抽奖= type=cron,cronexp="10 7 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yyn618/QuantumultX-Script/main/Task/JD/jd_sxLottery.js
+
+
+
+[MITM]
+hostname = %APPEND%  api.m.jd.com,wq.jd.com,ms.jr.jd.com, me-api.jd.com
