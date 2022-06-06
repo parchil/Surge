@@ -1,5 +1,4 @@
-var body = $response.body;
-var obj = JSON.parse(body);
+var obj = JSON.parse($response.body);
 
 obj = {
   "isValid": true,
